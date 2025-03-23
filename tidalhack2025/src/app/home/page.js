@@ -47,8 +47,8 @@ export default function Page() {
       <h1 className="text-2xl font-semibold mb-4 text-center">What kind of events would you like to attend?</h1>
 
       <div className="grid w-full gap-2 mb-10">
-        <Textarea onChange={(e) => setText(e.target.value)} placeholder="Type your message here." />
-        <Button >Let's Go!</Button>
+        <Textarea className="mb-3" onChange={(e) => setText(e.target.value)} placeholder="Type your message here." />
+        <Button className="w-full">Let's Go!</Button>
       </div>
 
       <h1 className="text-2xl font-semibold mb-4 mt-4text-center">Upcoming Events For You</h1>
