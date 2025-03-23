@@ -7,7 +7,7 @@ export default function Page() {
 
   return (
     <div className="text-center m-10 space-y-10">
-      <h1 className="text-2xl font-semibold">Title Placeholder</h1>
+      <h1 className="text-2xl font-semibold"> Welcome To HowdyHotspot</h1>
 
       <button
         onClick={() => router.push("/onboarding")}
