@@ -48,7 +48,7 @@ export default function Page() {
 
       <div className="grid w-full gap-2 mb-20">
         <Textarea className="mb-6" onChange={(e) => setText(e.target.value)} placeholder="Type your message here." />
-        <Button className="w-full">Let's Go!</Button>
+        <Button className="w-full mb-10">Let's Go!</Button>
       </div>
 
       <h1 className="text-2xl font-semibold mb-4 mt-4text-center">Upcoming Events For You</h1>
