@@ -66,7 +66,7 @@ export default function Page() {
       </div>
       
       <p className="text-2xl font-semibold">What does your availability look like?</p>
-      <div className="flex justify-center space-x-2">
+      <div className="flex flex-wrap justify-center space-y-2 space-x-2 max-w-md mx-auto">
         {days.map((day) => (
           <Button
             key={day}
@@ -102,11 +102,21 @@ export default function Page() {
           </p>
         </div>
       ))}
-            <TopicsSelector onTopicsChange={handleTopicsChange} />
+
+      <TopicsSelector onTopicsChange={handleTopicsChange} />
+
+      <Button
+        onClick={() => router.push("/home")}
+        disabled={selectedDays.length === 0 || selectedTopics.length === 0}
+        className={`px-6 py-3 rounded-lg ${
+          selectedDays.length === 0 || selectedTopics.length === 0
+            ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+            : "bg-black text-white hover:bg-blue-700"
+        }`}
+      >
+        Next
+      </Button>
 
     </div>
   );
 }
-
-
-
