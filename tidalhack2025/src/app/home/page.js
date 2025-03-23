@@ -6,7 +6,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
+import { useEffect, useState } from "react";
+
 export default function Page() {
+  const [text, setText] = useState("");
+
+  //useEffect(() => ({
+  //
+  //}), []);
+
   const events = [
     {
       id: "event-1",
@@ -33,7 +44,14 @@ export default function Page() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-4 text-center">Upcoming Events For You</h1>
+      <h1 className="text-2xl font-semibold mb-4 text-center">What kind of events would you like to attend?</h1>
+
+      <div className="grid w-full gap-2 mb-10">
+        <Textarea onChange={(e) => setText(e.target.value)} placeholder="Type your message here." />
+        <Button >Let's Go!</Button>
+      </div>
+
+      <h1 className="text-2xl font-semibold mb-4 mt-4text-center">Upcoming Events For You</h1>
       <Accordion type="single" collapsible className="w-full">
         {events.map((event) => (
           <AccordionItem key={event.id} value={event.id}>
