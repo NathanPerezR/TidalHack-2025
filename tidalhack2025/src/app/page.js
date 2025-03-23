@@ -21,6 +21,8 @@ export default function Page() {
     <div className="text-center m-10 space-y-10">
       <h1 className="text-2xl font-semibold"> Welcome To HowdyHotspot</h1>
 
+      <p>Discover events that match your interests at Texas A&M with our easy-to-use app! From club gatherings and guest lectures to sports and recreation, find what’s happening on campus and navigate your way there effortlessly.</p>
+
       <button
         onClick={() => router.push("/onboarding?userId=" + userId)}
         className="animate-bounce bg-black text-white  px-6 py-3 rounded-lg hover:bg-blue-700 transition"
